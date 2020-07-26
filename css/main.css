@@ -443,33 +443,37 @@ h1, h2, h3 {
 }
 
 .socials__item--icon--tg .socials__link {
-    background-image: url(../img/icons/socials/t.png);
+    background-image: url(../img/icons/socials/t2.png);
+    opacity: 0.5;
 }
 
 .socials__item--icon--tg .socials__link:hover {
-    background-image: url(../img/icons/socials/t2.png);
+    opacity: 1;
 }
 
 .socials__item--icon--vk .socials__link {
-    background-image: url(../img/icons/socials/vk.png);
+    background-image: url(../img/icons/socials/vk2.png);
+    opacity: 0.5;
 }
 
 .socials__item--icon--vk .socials__link:hover {
-    background-image: url(../img/icons/socials/vk2.png);
+    opacity: 1;
 }
 
 .socials__item--icon--fb .socials__link {
-    background-image: url(../img/icons/socials/f.png);
+    background-image: url(../img/icons/socials/f2.png);
+    opacity: 0.5;
 }
 
 .socials__item--icon--fb .socials__link:hover {
-    background-image: url(../img/icons/socials/f2.png);
+    opacity: 1;
 }
 
 .socials__item--icon--insta .socials__link {
-    background-image: url(../img/icons/socials/in.png);
+    background-image: url(../img/icons/socials/in2.png);
+    opacity: 0.5;
 }
 
 .socials__item--icon--insta .socials__link:hover {
-    background-image: url(../img/icons/socials/in2.png);
+    opacity: 1;
 }
