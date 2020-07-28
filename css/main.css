@@ -215,7 +215,7 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-.tour__terms:last-child {
+.tour__item:last-child {
     margin-right: 0px;
 }
 
@@ -240,10 +240,6 @@ h1, h2, h3 {
     display: inline-block;
     margin-right: 29px;
     color: #666666;
-}
-
-tour__terms-item:last-child {
-    margin-right: 0;
 }
 
 .tour__terms-icon {
