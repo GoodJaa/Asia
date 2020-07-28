@@ -236,6 +236,10 @@ h1, h2, h3 {
     margin-bottom: 21px;
 }
 
+tour__terms:last-child {
+    margin-right: 0;
+}
+
 .tour__terms-item {
     display: inline-block;
     margin-right: 29px;
