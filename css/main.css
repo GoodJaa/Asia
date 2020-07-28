@@ -215,7 +215,7 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-.tour__item:last-child {
+.tour__terms:last-child {
     margin-right: 0px;
 }
 
