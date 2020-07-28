@@ -242,6 +242,10 @@ h1, h2, h3 {
     color: #666666;
 }
 
+.tour__terms-item:last-child {
+    margin-right: 0px;
+}
+
 .tour__terms-icon {
     vertical-align: middle;
 }
@@ -400,13 +404,13 @@ h1, h2, h3 {
 }
 
 .about__info-text {
-    margin-bottom: 42px;
+    margin-bottom: 11px;
     color: #060606;
     line-height: 1.7;
 }
 
 .about__info-text p {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .about__info-text p:last-child {
