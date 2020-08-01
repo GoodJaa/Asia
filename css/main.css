@@ -43,14 +43,12 @@ h1, h2, h3 {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    min-height: 1200px;
+    min-width: 1200px;
 }
 
 .main-page-wrapper {
     background: url(../img/bg/hero.jpg) center top no-repeat, url(../img/bg/bottom-pic.jpg) center bottom 155px no-repeat;
     min-height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 
