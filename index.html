@@ -12,29 +12,33 @@
 <body>
     <div class="wrapper main-page-wrapper">
         <div class="container">
-            <header class="header">
-                <a href="/" class="logo">
-                    <img src="./img/Air_Asia-logo.png" alt="Логотип" class="logo__img">
-                </a>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="">Главная</a>
-                        </li>
-                        <li class="menu__item menu__item--active">
-                            <a class="menu__link" href="">Услуги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="">Отзывы</a>
-                        </li>
-                    </ul>
-                </nav>
-                <address class="contacts">
-                    <a href="tel:88007003030" class="contacts__phone">8 800 700 30 30</a>
-                    <div class="contacts__dropdown-title">График работы</div>
-                </address>
-            </header>
-            <main class="main">
+            <section class="hero">
+                <header class="header">
+                    <div class="header__col">
+                        <a href="/" class="logo">
+                            <img src="./img/Air_Asia-logo.png" alt="Логотип" class="logo__img">
+                        </a>
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">Главная</a>
+                                </li>
+                                <li class="menu__item menu__item--active">
+                                    <a class="menu__link" href="">Услуги</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">Отзывы</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__col header__col--align--right">
+                        <address class="contacts">
+                            <a href="tel:88007003030" class="contacts__phone">8 800 700 30 30</a>
+                            <div class="contacts__dropdown-title">График работы</div>
+                        </address>
+                    </div>
+                </header>
                 <div class="preview">
                     <h1 class="preview__title">
                         Авторские туры по Азии
@@ -42,11 +46,15 @@
                     <div class="preview__info">
                         Открой для себя Азию
                     </div>
-                    <a href="/" class="button">Подробнее</a>
+                    <div class="preview__button-wrapper">
+                        <a href="/" class="button">Подробнее</a>
+                    </div>
                 </div>
-                <section class="section">
+            </section>
+            <section class="section">
+                <main class="main">
                     <div class="tour">
-                        <div class="section__title">
+                        <div class="tour__title">
                             <h2 class="tour__title-word">Горящие туры</h2>
                             <img src="./img/icons/flame.png" alt="Горящий огонь иконка" class="tour__title-icon">
                         </div>
@@ -77,7 +85,9 @@
                                             массового участия.
                                         </p>
                                     </div>
-                                    <a href="" class="tour__button">Cмотреть</a>
+                                    <div class="tour__button-wrapper">
+                                        <a href="" class="tour__button">Cмотреть</a>
+                                    </div>
                                 </div>
                             </li>
                             <li class="tour__item">
@@ -106,7 +116,9 @@
                                             массового участия.
                                         </p>
                                     </div>
-                                    <a href="" class="tour__button tour__button--active">Cмотреть</a>
+                                    <div class="tour__button-wrapper">
+                                        <a href="" class="tour__button tour__button--active">Cмотреть</a>
+                                    </div>
                                 </div>
                             </li>
                             <li class="tour__item">
@@ -135,38 +147,39 @@
                                             массового участия.
                                         </p>
                                     </div>
-                                    <a href="" class="tour__button">Cмотреть</a>
+                                    <div class="tour__button-wrapper">
+                                        <a href="" class="tour__button">Cмотреть</a>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </section>
-                <section class="section section-news__extramarg">
                     <div class="news">
-                        <div class="section__title">
-                            <h2 class="section__title-word">Новости и акции</h2>
+                        <div class="news__title">
+                            <h2 class="news__title-word">Новости и акции</h2>
                         </div>
                         <ul class="news__list">
-                            <li class="news__item">
-                                <img src="./img/content/news/plain.jpg" alt="Дешевые путевки" class="news__img">
-                                <div class="news__info">
-                                    <time class="news__date">Декабрь 2019</time>
-                                    <div class="news__subtitle">
+                            <li class="news__item single-news">
+                                <img src="./img/content/news/plain.jpg" alt="Дешевые путевки" class="single-news__img">
+                                <div class="single-news__info">
+                                    <time class="single-news__date">Декабрь 2019</time>
+                                    <div class="single-news__subtitle">
                                         Дешевые путевки на Новый Год!
                                     </div>
-                                    <div class="news__text">
+                                    <div class="single-news__text">
                                         Проведи новый год в Тайланде
                                     </div>
                                 </div>
                             </li>
-                            <li class="news__item">
-                                <img src="./img/content/news/surfer.jpg" alt="Акция для серфенгистов" class="news__img">
-                                <div class="news__info">
-                                    <time class="news__date">Декабрь 2019</time>
-                                    <div class="news__subtitle">
+                            <li class="news__item single-news">
+                                <img src="./img/content/news/surfer.jpg" alt="Акция для серфенгистов"
+                                    class="single-news__img">
+                                <div class="single-news__info">
+                                    <time class="single-news__date">Декабрь 2019</time>
+                                    <div class="single-news__subtitle">
                                         Акция для серфенгистов!
                                     </div>
-                                    <div class="news__text">
+                                    <div class="single-news__text">
                                         В сезон больших волн скидка на путевку в Тайланд на остров серфенгистов.
                                         Удачного
                                         пути!
@@ -204,8 +217,6 @@
                             </li>
                         </ul>
                     </div>
-                </section>
-                <section class="section section-about__extramarg">
                     <div class="about">
                         <div class="about__info">
                             <h3 class="about__title">
@@ -218,14 +229,16 @@
                                     отточить навык публичных выступлений в домашних условиях. При создании генератора мы
                                     использовали небезизвестный универсальный код речей.
                                 </p>
-                                <a href="/" class="button">Подробнее</a>
+                                <div class="preview__button-wrapper">
+                                    <a href="/" class="button">Подробнее</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <div class="footer-container footer-container__content">
+                </main>
+            </section>
+            <footer class="footer-container footer-container--content">
+                <div class="footer__col">
                     <a href="/" class="logo footer__logo">
                         <img src="./img/Air_Asia-logo.png" alt="Логотип" class="logo__img">
                     </a>
@@ -242,6 +255,8 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+                <div class="footer__col footer__col--align--right">
                     <div class="socials">
                         <ul class="socials__list">
                             <li class="socials__item socials__item--icon--tg">
