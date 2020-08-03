@@ -204,6 +204,10 @@ h1, h2, h3 {
     margin-bottom: 42px;
 }
 
+.services__item:last-child {
+    margin-bottom: 0px;
+}
+
 .service {
     display: flex;
 }
@@ -311,7 +315,7 @@ h1, h2, h3 {
 .inner-section {
     background: #ffffff;
     color: #1A1B1E;
-    padding-bottom: 122px;
+    padding-bottom: 93px;
     padding-top: 84px;
 }
 
@@ -380,12 +384,11 @@ h1, h2, h3 {
 }
 
 .socials {
-    margin-right: 52px;
+    margin-right: 72px;
 }
 
 .socials__list {
     display: flex;
-    margin-right: 20px;
 }
 
 .socials__item {
