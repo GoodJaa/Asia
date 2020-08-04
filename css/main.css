@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-html {
+html, body {
     height: 100%;
     width: 100%;
 }
 
 body {
-    height: 100%;
-    width: 100%;
     background-color: #001821;
     color: #ffffff;
     font: 400 16px/1.42 'Open Sans', Helvetica, sans-serif;
@@ -42,11 +40,16 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 1200px;
+}
+
 .main-page-wrapper {
     background: url(../img/bg/hero.jpg) center top no-repeat, url(../img/bg/bottom-pic.jpg) center bottom 155px no-repeat;
     min-height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .container {
@@ -54,12 +57,28 @@ h1, h2, h3 {
     width: 1140px;
 }
 
-.header {
-    min-height: 136px;
+.hero {
     display: flex;
-    margin-bottom: 51px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 530px;
+    margin-bottom: 246px;
+}
+
+.header {
+    padding-top: 27px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__col {
+    display: flex;
+    align-items: center;
+}
+
+.header__col--align--right {
+    justify-content: flex-end;
 }
 
 .logo__img {
@@ -100,42 +119,28 @@ h1, h2, h3 {
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
+    font-style: normal;
 }
 
 .contacts__description {
     font-size: 11px;
     color: #9A9A9A;
     text-align: right;
-    margin-top: 7px;
 }
 
 .contacts__phone {
-    display: block;
     text-decoration: none;
     font-size: 26px;
 }
 
 .contacts__dropdown-title {
-    display: block;
     font-size: 13px;
     text-decoration: underline;
-    margin-top: -3px;
     text-align: right;
 }
 
-.main {
-    display: flex;
-    flex-direction: column
-}
-
 .preview {
-    width: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 249px;
+    width: 45%;
 }
 
 .preview__title {
@@ -150,11 +155,14 @@ h1, h2, h3 {
     margin-bottom: 34px;
 }
 
+.preview__button-wrapper {
+    display: flex;
+}
+
 .button {
     background-color: #F5170E;
     border-radius: 35px;
     border-style: none;
-    display: inline-flex;
     min-width: 170px;
     padding: 16px 39px;
     color: #fff;
@@ -166,32 +174,19 @@ h1, h2, h3 {
     background-color: #DA0100;
 }
 
-.section {
+.tour {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 143px;
 }
 
-.section-news__extramarg {
-    margin-bottom: 150px;
-}
-
-.section__title {
-    margin-bottom: 46px;
+.tour__title {
+    margin-bottom: 51px;
     display: flex;
     align-items: center;
 }
 
-.section__title-word {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.tour {
-    display: flex;
-    flex-direction: column;
-}
-
 .tour__title-word {
-    display: block;
     font-size: 36px;
     font-weight: bold;
     margin-right: 5px;
@@ -206,14 +201,14 @@ h1, h2, h3 {
 
 .tour__list {
     display: flex;
+    justify-content: space-between;
 }
 
 .tour__item {
     display: flex;
     flex-direction: column;
     min-height: 436px;
-    width: 361px;
-    margin-right: 30px;
+    width: calc(100% / 3 - 18px);
     background-color: #fff;
     border-radius: 5px 5px 5px 5px;
     overflow: hidden;
@@ -235,6 +230,9 @@ h1, h2, h3 {
 }
 
 .tour__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 22px 23px;
     color: #000;
     line-height: 1.5;
@@ -282,8 +280,11 @@ h1, h2, h3 {
     margin-bottom: 12px;
 }
 
+.tour__button-wrapper {
+    display: flex;
+}
+
 .tour__button {
-    display: inline-flex;
     min-width: 135px;
     padding: 14px 27px;
     font-size: 14px;
@@ -293,7 +294,7 @@ h1, h2, h3 {
     border-radius: 35px;
     border: 1px solid #F5170E;
     color: #F5170E;
-    margin-left: 3px;
+    text-align: center;
 }
 
 .tour__button:hover {
@@ -310,27 +311,35 @@ h1, h2, h3 {
     margin-bottom: 51px;
 }
 
+.news__title-word {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 51px;
+}
+
 .news__list {
     display: flex;
     justify-content: space-between;
 }
 
 .news__item {
-    width: 557px;
-    height: 394px;
-    display: flex;
     flex: 1;
+    min-height: 388px;
+    vertical-align: top;
+    margin-right: 3%;
+}
+
+.single-news {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    margin-right: 21px;
 }
 
 .news__item:last-child {
     margin-right: 0px;
 }
 
-.news__img {
+.single-news__img {
     display: block;
     width: 100%;
     height: 100%;
@@ -338,23 +347,23 @@ h1, h2, h3 {
     opacity: .8;
 }
 
-.news__info {
+.single-news__info {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 228px;
-    padding: 25px 31px;
+    padding: 21px 31px;
     min-height: 171px;
 }
 
-.news__date {
+.single-news__date {
     display: block;
     font-size: 14px;
     margin-bottom: 9px;
 }
 
-.news__subtitle {
+.single-news__subtitle {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 6px;
@@ -364,6 +373,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 150px;
 }
 
 .paginator__display {
@@ -397,7 +407,6 @@ h1, h2, h3 {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    position: relative;
     line-height: 32px;
 }
 
@@ -413,6 +422,7 @@ h1, h2, h3 {
 
 .about {
     display: flex;
+    margin-bottom: 42px;
 }
 
 .about:before {
@@ -457,25 +467,29 @@ h1, h2, h3 {
     margin-bottom: 0;
 }
 
-.section-about__extramarg {
-    margin-bottom: 17px;
-}
-
 .footer-container {
+    margin-top: auto;
     height: 146px;
-    margin-top: 22px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.footer-container__content {
+.footer-container--content {
     border-top: 1px solid rgba(255, 255, 255, 0.1)
 }
 
-.socials {
+.footer__col {
     display: flex;
-    flex: 1;
+    align-items: center;
+}
+
+.footer__col--align--right {
+    justify-content: flex-end;
+}
+
+.socials {
+    margin-right: 52px;
 }
 
 .socials__list {
