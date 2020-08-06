@@ -50,6 +50,7 @@ h1, h2, h3 {
     flex-direction: column;
     min-height: 100%;
     min-width: 1200px;
+    overflow: hidden;
 }
 
 .top-line {
@@ -128,6 +129,9 @@ h1, h2, h3 {
 
 .contacts {
     font-style: normal;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .contacts__description {
@@ -137,13 +141,72 @@ h1, h2, h3 {
 }
 
 .contacts__phone {
+    text-decoration: none;
     font-size: 26px;
+    line-height: 1.2;
+}
+
+.contacts__dropdown {
+    position: relative;
+    cursor: default;
+}
+
+.contacts__dropdown:hover .contacts__dropdown-menu {
+    right: 0;
+    opacity: .8;
+}
+
+.contacts__dropdown_textstyle {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contacts__dropdown-menu {
+    position: absolute;
+    background: #EDEDED;
+    border-radius: 5px;
+    width: 152px;
+    padding: 12px;
+    text-align: center;
+    top: 100%;
+    right: -9999px;
+    color: #1E1F20;
+    opacity: 0;
+    transition: opacity .4s;
+    margin-top: 4px;
+}
+
+.contacts__dropdown-menu:before {
+    content: '';
+    height: 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -19px;
+    position: absolute;
+}
+
+.contacts__dropdown-menu:after {
+    content: '';
+    border: 15px solid transparent;
+    display: block;
+    border-right-width: 11px;
+    border-left-width: 11px;
+    right: 41px;
+    border-bottom-color: #EDEDED;
+    border-top-width: 0px;
+    position: absolute;
+    top: -9px;
 }
 
 .contacts__dropdown-title {
-    font-size: 13px;
+    display: inline-flex;
     text-decoration: underline;
     text-align: right;
+}
+
+.contacts__dropdown-item_fontstyle {
+    font-weight: bold;
 }
 
 .page__title {
@@ -384,11 +447,12 @@ h1, h2, h3 {
 }
 
 .socials {
-    margin-right: 72px;
+    margin-right: 52px;
 }
 
 .socials__list {
     display: flex;
+    margin-right: 20px;
 }
 
 .socials__item {
@@ -401,44 +465,73 @@ h1, h2, h3 {
 }
 
 .socials__link {
-    display: block;
-    width: 36px;
     height: 36px;
-    background: center center no-repeat;
+    width: 36px;
+    border-radius: 50%;
+    position: relative;
 }
 
-.socials__item--icon--tg .socials__link {
-    background-image: url(../img/icons/socials/t2.png);
-    opacity: 0.5;
+.socials__link:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 36px;
+    width: 36px;
+    transform: translate(-50%, -50%);
+    transition: .3s;
 }
 
-.socials__item--icon--tg .socials__link:hover {
-    opacity: 1;
+.socials__link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 36px;
+    width: 36px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s;
 }
 
-.socials__item--icon--vk .socials__link {
-    background-image: url(../img/icons/socials/vk2.png);
-    opacity: 0.5;
+.socials__item--icon--tg .socials__link:after {
+    background: url(../img/icons/socials/socials_sprites.png) -122px -10px;
 }
 
-.socials__item--icon--vk .socials__link:hover {
-    opacity: 1;
+.socials__item--icon--tg .socials__link:before {
+    background: url(../img/icons/socials/socials_sprites.png) -122px -66px;
 }
 
-.socials__item--icon--fb .socials__link {
-    background-image: url(../img/icons/socials/f2.png);
-    opacity: 0.5;
+.socials__item--icon--vk .socials__link:after {
+    background: url(../img/icons/socials/socials_sprites.png) -10px -122px;;
 }
 
-.socials__item--icon--fb .socials__link:hover {
-    opacity: 1;
+.socials__item--icon--vk .socials__link:before  {
+    background: url(../img/icons/socials/socials_sprites.png) -66px -122px;;
 }
 
-.socials__item--icon--insta .socials__link {
-    background-image: url(../img/icons/socials/in2.png);
-    opacity: 0.5;
+.socials__item--icon--fb .socials__link:after  {
+    background: url(../img/icons/socials/socials_sprites.png) -10px -10px;
 }
 
-.socials__item--icon--insta .socials__link:hover {
+.socials__item--icon--fb .socials__link:before  {
+    background: url(../img/icons/socials/socials_sprites.png) -66px -10px;
+}
+
+.socials__item--icon--insta .socials__link:after  {
+    background: url(../img/icons/socials/socials_sprites.png) -10px -66px;
+}
+
+.socials__item--icon--insta .socials__link:before  {
+    background: url(../img/icons/socials/socials_sprites.png) -66px -66px;
+}
+
+.socials__link:hover:after {
+    opacity: 0;
+}
+
+.socials__link:hover:before {
     opacity: 1;
 }
