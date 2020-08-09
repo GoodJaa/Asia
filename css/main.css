@@ -224,7 +224,6 @@ h1, h2, h3 {
     background-color: #F5170E;
     border-radius: 35px;
     border-style: none;
-    min-width: 170px;
     padding: 16px 39px;
     color: #fff;
     font: bold 14px/1.42 'Open Sans', Helvetica, sans-serif;
@@ -346,7 +345,6 @@ h1, h2, h3 {
 }
 
 .tour__button {
-    min-width: 135px;
     padding: 14px 27px;
     font-size: 14px;
     font-weight: bold;
