@@ -463,7 +463,7 @@ h1, h2, h3 {
 }
 
 .form__input:focus {
-    border: 1px solid #F5170E
+    outline: #F5170E auto 1px;
 }
 
 .form__input::placeholder {
