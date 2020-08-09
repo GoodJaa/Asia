@@ -125,6 +125,7 @@ h1, h2, h3 {
 
 .menu__link:hover {
     color: #DA0100;
+    transition: .3s;
 }
 
 .contacts {
@@ -321,6 +322,7 @@ h1, h2, h3 {
 .service__button:hover {
     background-color: #F5170E;
     color: #FFF;
+    transition: .3s;
 }
 
 .paginator {
@@ -372,6 +374,7 @@ h1, h2, h3 {
 .paginator__link:hover {
     background-color: #F5170E;
     color: #FFF;
+    transition: .3s;
 }
 
 .inner-section {
@@ -420,6 +423,7 @@ h1, h2, h3 {
 
 .partners__link:hover {
     filter: grayscale(0);
+    transition: .3s;
 }
 
 .inner-footer {
