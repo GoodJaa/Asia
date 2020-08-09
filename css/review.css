@@ -527,13 +527,14 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-.button--margin {
+.input__button {
     margin-right: 20px;
+    padding: 16px 45px;
+    cursor: pointer;
 }
 
-.button--bg--black {
+.button--bg--black:hover {
     background: #2B2B2B;
-    padding: 16px 45px;
 }
 
 .inner-footer {
